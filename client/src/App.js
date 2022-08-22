@@ -5,8 +5,8 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { countState } from "./recoil/atoms";
 
 function App() {
-  const [count, setCount] = useState(0)
-    // const [count, setCount] = useRecoilState(countState)
+  // const [count, setCount] = useState(0)
+  const [count, setCount] = useRecoilState(countState)
   // const count = useRecoilValue(countState);
 
   // useEffect(() => {
