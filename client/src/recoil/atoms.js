@@ -1,8 +1,9 @@
 import { atom } from "recoil";
+import { bulbasaur } from "./defaultdata";
 
-export const countState = atom({
-    key: 'countState',
-    default: 0,
+export const pokemonsState = atom({
+    key: 'pokemons',
+    default: [],
 })
 
 export const usernameState = atom({
@@ -28,4 +29,19 @@ export const currentUser = atom({
 export const showPassword = atom({
     key: 'showPassword',
     default: false,
+})
+
+export const detailTargetState = atom({
+    key: 'detailTargetState',
+    default: [],
+})
+
+export const offsetState = atom({
+    key: 'offsetState',
+    default: 0,
+})
+
+export const pokeFocusState = atom({
+    key: 'pokeFocusState',
+    default: bulbasaur,
 })

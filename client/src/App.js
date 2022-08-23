@@ -10,6 +10,7 @@ import TeamContainer from "./components/TeamContainer";
 import PokedexContainer from "./components/PokedexContainer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import DetailCard from "./components/DetailCard";
 
 function App() {
 
@@ -66,6 +67,12 @@ function App() {
               <Container maxWidth={"false"}>
                 <SignUp setUser={setUser}/>
               </Container>
+            }
+          />
+          <Route 
+            path="/details"
+            element={
+                <DetailCard />
             }
           />
         </Routes>
