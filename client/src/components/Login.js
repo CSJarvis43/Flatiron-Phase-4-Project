@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from '@mui/material'
+import { Box, Button, Container, FormControl, Grid, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useRecoilState } from 'recoil';
@@ -34,36 +34,53 @@ function Login({setUser}) {
 
   return (
     <Container maxWidth="false">
-        <Typography>
-            YO
-        </Typography>
-        <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
-            <label htmlFor="username">Username</label>
-            <input
-                type="text"
-                id="username"
-                autoComplete="off"
-                alue={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <label htmlFor="password">Password</label>
-            <input
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button type="submit">Login</button>
-        </form>
-        <Button
-            variant='contained'
-            component={Link}
-            to="/signup"
-        >
-            Signup
-        </Button>
+        <Grid container>
+            <Grid item xs={12} align="center" justify="center">
+                <FormControl sx={{ m: 2 }}>
+                    <Typography justifySelf={'center'}>
+                        Login
+                    </Typography>
+                    <TextField
+                        sx={{ m: 2 }}
+                        required
+                        id="username"
+                        autoComplete="off"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        label="Username"
+                    />
+                    <TextField
+                        sx={{ m: 2 }}
+                        required
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        label="Password"
+                    />
+                    <Button
+                        sx={{ m: 2 }}
+                        onClick={handleSubmit}
+                        variant="contained"
+                    >
+                        Login
+                    </Button>
+                </FormControl>
+            </Grid>
+        </Grid>
+        <Grid container>
+            <Grid item xs={12} align="center" justify="center">
+                <Button
+                    variant='contained'
+                    component={Link}
+                    to="/signup"
+                    align="center"
+                    justify="center"
+                >
+                    Sign Up Instead
+                </Button>
+            </Grid>
+        </Grid>
     </Container>
   )
 }

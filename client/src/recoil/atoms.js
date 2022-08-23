@@ -24,3 +24,8 @@ export const currentUser = atom({
     key: 'currentUser',
     default: null,
 })
+
+export const showPassword = atom({
+    key: 'showPassword',
+    default: false,
+})
