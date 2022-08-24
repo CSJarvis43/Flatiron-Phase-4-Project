@@ -10,7 +10,7 @@ function TeamContainer() {
     const user = useRecoilValue(currentUser)
 
     useEffect(() => {
-        fetch('pokemons').then(r => r.json()).then(d => setPokemonTeam(d))
+        fetch('/pokemons').then(r => r.json()).then(d => setPokemonTeam(d))
     }, [pokemonTeam])
 
     // console.log(pokemonTeam)
