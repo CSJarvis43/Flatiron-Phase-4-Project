@@ -3,7 +3,7 @@ import { Grid, Paper, Typography } from '@mui/material';
 
 function Stats({stat, base}) {
 
-    console.log(stat.name)
+    // console.log(stat.name)
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);

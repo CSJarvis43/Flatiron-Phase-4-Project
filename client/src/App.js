@@ -11,6 +11,7 @@ import PokedexContainer from "./components/PokedexContainer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import DetailCard from "./components/DetailCard";
+import MoveDetail from "./components/MoveDetail";
 
 function App() {
 
@@ -73,6 +74,12 @@ function App() {
             path="/details"
             element={
                 <DetailCard />
+            }
+          />
+          <Route 
+            path="/move"
+            element={
+                <MoveDetail />
             }
           />
         </Routes>
