@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { bulbasaur } from "./defaultdata";
+import { bulbasaur, flamethrower } from "./defaultdata";
 
 export const pokemonsState = atom({
     key: 'pokemons',
@@ -44,4 +44,24 @@ export const offsetState = atom({
 export const pokeFocusState = atom({
     key: 'pokeFocusState',
     default: bulbasaur,
+})
+
+export const moveDetailUrlState = atom({
+    key: 'moveDetailUrlState',
+    default: 'https://pokeapi.co/api/v2/move/53/',
+})
+
+export const pokedexIdState = atom({
+    key: 'pokedexIdState',
+    default: 1,
+})
+
+export const moveDetailState = atom({
+    key: 'moveDetailState',
+    default: flamethrower,
+})
+
+export const pokemonTeamState = atom({
+    key: 'pokemonTeamState',
+    default: [],
 })

@@ -17,7 +17,7 @@ function PokemonCard({ pokemon }) {
         setDetailTarget(pokemon.url)
     }
 
-    console.log(detailTarget)
+    // console.log(detailTarget)
 
   return (
     <Grid item xs={1} className={'pokeGrid'}>
@@ -45,7 +45,7 @@ function PokemonCard({ pokemon }) {
                     component={Link}
                     to="/details"
                 >
-                    Open
+                    Details
                 </Button>
             </Box>
         </Paper>
