@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#create'
 
   get '/pokemons/:id/moves', to: 'pokemons#moves'
+  post '/pokemons/:id/moves', to: 'pokemons#new_move'
 
 
   #leave as last line

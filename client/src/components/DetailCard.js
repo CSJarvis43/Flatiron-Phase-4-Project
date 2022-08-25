@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardMedia, Container, Grid, Paper, Typography, CardContent, CardActions } from '@mui/material'
 import React, { useEffect } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
-import { currentUser, detailTargetState, pokeFocusState } from '../recoil/atoms'
+import { currentUser, detailTargetState, pokeFocusState, pokemonTeamState } from '../recoil/atoms'
 import { Link } from 'react-router-dom';
 import Move from './Move';
 import Type from './Type';
@@ -12,12 +12,18 @@ function DetailCard() {
     const detailTarget = useRecoilValue(detailTargetState)
     const [mainFocusState, setMainFocusState] = useRecoilState(pokeFocusState)
     const user = useRecoilValue(currentUser)
+    const pokemonTeam = useRecoilValue(pokemonTeamState)
+
 
     useEffect(() => {
         fetch(detailTarget).then(r => r.json()).then(setMainFocusState)
     }, [])
 
     // console.log(mainFocusState)
+
+    const filteredTeamByMoveLearn = pokemonTeam.filter(p => p.entry_number === mainFocusState.id)
+
+    // console.log(filteredTeamByMoveLearn)
 
     const IMG_URL = mainFocusState["sprites"]["versions"]["generation-vii"]["ultra-sun-ultra-moon"]["front_default"]
     const SHINY_URL = mainFocusState["sprites"]["versions"]["generation-vii"]["ultra-sun-ultra-moon"]["front_shiny"]
@@ -108,6 +114,7 @@ function DetailCard() {
                             details={m.version_group_details}
                             url={m.move.url}
                             entryNumber={mainFocusState.id}
+                            learnerPokemon={filteredTeamByMoveLearn}
                         />
                     ))}
                 </Grid>
