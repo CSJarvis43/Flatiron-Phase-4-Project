@@ -2,11 +2,12 @@ class PokemonsController < ApplicationController
 
 
     def index
-        render json: Pokemon.all
+        pokemon = Pokemon.all
+        render json: pokemon, include: :moves
     end
 
     def show
-        render json: find_pokemon
+        render json: find_pokemon, include: :moves
     end
 
     def create
@@ -16,6 +17,11 @@ class PokemonsController < ApplicationController
     def destroy
         find_pokemon.destroy
         head :no_content
+    end
+
+    def moves
+        pokemon = find_pokemon
+        render json: pokemon.moves
     end
 
 

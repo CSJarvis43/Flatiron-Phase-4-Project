@@ -26,7 +26,6 @@ function Login({setUser}) {
         .then((r) => r.json())
         .then((user) => {
             setUser(user)
-            console.log(user)
             navigate('/')
         })
     }

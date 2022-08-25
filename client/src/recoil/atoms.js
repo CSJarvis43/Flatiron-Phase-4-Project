@@ -70,3 +70,8 @@ export const operandState = atom({
     key: 'operandState',
     default: 0,
 })
+
+export const teamMovesState = atom({
+    key: 'teamMovesState',
+    default: [],
+})
