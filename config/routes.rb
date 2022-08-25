@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/me', to: 'users#show'
   get '/signup', to: 'users#create'
 
+  get '/pokemons/:id/moves', to: 'pokemons#moves'
+
 
   #leave as last line
   get '*path',
