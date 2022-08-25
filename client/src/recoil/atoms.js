@@ -75,3 +75,8 @@ export const teamMovesState = atom({
     key: 'teamMovesState',
     default: [],
 })
+
+export const learningPokemonIdState = atom({
+    key: 'learningPokemonIdState',
+    default: 0,
+})
