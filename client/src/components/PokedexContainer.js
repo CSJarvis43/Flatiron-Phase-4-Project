@@ -8,6 +8,7 @@ function PokedexContainer() {
 
     const [pokemons, setPokemons] = useRecoilState(pokemonsState)
     const [offset, setOffset] = useRecoilState(offsetState)
+
     
 
     useEffect(() => {
@@ -35,7 +36,7 @@ function PokedexContainer() {
         <Grid container>
             {pokemons.map(p => (
                 <PokemonCard 
-                    key={p.id}
+                    key={p.name}
                     pokemon={p}
                 />
             ))}

@@ -1,4 +1,4 @@
-import { Button, Card, CardMedia, Grid, Typography, CardContent, CardActions } from '@mui/material'
+import { Button, Card, CardMedia, Grid, Typography, CardContent, CardActions, Box, Container } from '@mui/material'
 import { Link } from 'react-router-dom';
 import React from 'react'
 import { useRecoilState } from 'recoil';
