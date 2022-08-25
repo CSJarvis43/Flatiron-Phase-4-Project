@@ -38,6 +38,7 @@ function DetailCard() {
             body: JSON.stringify(newPkmnObj)
         })
         .then(r => r.json())
+        .then(d => console.log(d))
     }
 
 
