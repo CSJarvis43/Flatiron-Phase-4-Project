@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { learningPokemonIdState, moveDetailState, moveDetailUrlState, pokedexIdState, pokeFocusState } from '../recoil/atoms'
 import { Button, Card, Grid, Typography, CardContent, CardActions } from '@mui/material'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function MoveDetail() {
 
@@ -11,6 +11,8 @@ function MoveDetail() {
     const pokedexId = useRecoilValue(pokedexIdState)
     const mainFocusState = useRecoilValue(pokeFocusState)
     const learningPokemonId = useRecoilValue(learningPokemonIdState)
+
+    const navigate = useNavigate()
 
     
     function capitalizeFirstLetter(string) {
@@ -44,7 +46,7 @@ function MoveDetail() {
             body: JSON.stringify(newMoveObj)
         })
         .then(r => r.json())
-        .then(d => console.log(d))
+        .then(navigate('/team'))
     }
 
 

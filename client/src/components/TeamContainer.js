@@ -14,7 +14,7 @@ function TeamContainer() {
     useEffect(() => {
         fetch('/pokemons').then(r => r.json()).then(d => {
             setPokemonTeam(d)
-            console.log(d)
+            // console.log(d)
         })
     }, [operand])
 

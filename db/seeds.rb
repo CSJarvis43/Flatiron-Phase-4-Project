@@ -7,9 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-Pokemon.destroy_all
-User.destroy_all
-Move.destroy_all
+# Pokemon.destroy_all
+# User.destroy_all
+# Move.destroy_all
 
 puts 'Seeding Users'
 
