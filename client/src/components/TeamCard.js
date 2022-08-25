@@ -1,13 +1,13 @@
 import { Button, Card, CardMedia, Grid, Typography, CardContent, CardActions } from '@mui/material'
 import { Link } from 'react-router-dom';
 import React from 'react'
-import { useSetRecoilState } from 'recoil';
-import { pokemonTeamState } from '../recoil/atoms';
+import { useRecoilState } from 'recoil';
+import { operandState, pokemonTeamState } from '../recoil/atoms';
 
 function TeamCard({pokemon}) {
 
 
-    const setPokemonTeam = useSetRecoilState(pokemonTeamState)
+    const [operand, setOperand] = useRecoilState(operandState)
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -20,6 +20,7 @@ function TeamCard({pokemon}) {
                 "Content-Type": "Application/json",
             },
         })
+        .then(setOperand(operand + 1))
     }
 
 

@@ -65,3 +65,8 @@ export const pokemonTeamState = atom({
     key: 'pokemonTeamState',
     default: [],
 })
+
+export const operandState = atom({
+    key: 'operandState',
+    default: 0,
+})
