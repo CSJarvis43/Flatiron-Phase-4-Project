@@ -25,7 +25,7 @@ function DetailCard() {
     function handleCatch() {
         const newPkmnObj = {
             name: mainFocusState.name,
-            // ability: mainFocusState.abilities[0].ability.name,
+            ability: mainFocusState.abilities[0].ability.name,
             entry_number: mainFocusState.id,
             sprite: IMG_URL,
             user_id: user.id
