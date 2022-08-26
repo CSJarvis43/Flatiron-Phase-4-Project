@@ -4,6 +4,16 @@ import { useRecoilState } from 'recoil'
 import { offsetState, pokemonsState } from '../recoil/atoms'
 import PokemonCard from './PokemonCard'
 
+const sectionStyle = {
+    height: "100vh",
+  
+    backgroundImage:
+      "url('https://static.vecteezy.com/system/resources/previews/001/987/871/original/abstract-black-stripes-diagonal-background-free-vector.jpg') ",
+  
+    backgroundRepeat: "repeat",
+    backgroundSize: "cover"
+  };
+
 function PokedexContainer() {
 
     const [pokemons, setPokemons] = useRecoilState(pokemonsState)
@@ -32,7 +42,7 @@ function PokedexContainer() {
 
 
   return (
-    <Grid>
+    <Grid >
         <Grid container>
             {pokemons.map(p => (
                 <PokemonCard 
