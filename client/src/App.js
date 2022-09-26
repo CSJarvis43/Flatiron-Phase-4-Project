@@ -58,7 +58,7 @@ function App() {
             <Route
               path="/login"
               element={
-                <Container maxWidth={"false"} sx={{ backgroundImage: "url('https://projectpokemon.org/home/uploads/monthly_2020_08/large.T00P01.gif.9ec92a831b7e411a89d5f9d96c4be296.gif')", backgroundSize: "cover", backgroundPosition: "center"}}>
+                <Container maxWidth={"false"} sx={{ backgroundImage: "url('https://projectpokemon.org/home/uploads/monthly_2020_08/large.T00P01.gif.9ec92a831b7e411a89d5f9d96c4be296.gif')", backgroundSize: "cover", backgroundPosition: "center", minHeight: '100vh'}}>
                   <Login setUser={setUser}/>
                 </Container>
               }
@@ -66,7 +66,7 @@ function App() {
             <Route
               path="/signup"
               element={
-                <Container maxWidth={"false"} sx={{ backgroundImage: "url('https://projectpokemon.org/home/uploads/monthly_2020_08/large.T00P01.gif.9ec92a831b7e411a89d5f9d96c4be296.gif')", backgroundSize: "cover", backgroundPosition: "center"}}>
+                <Container maxWidth={"false"} sx={{ backgroundImage: "url('https://projectpokemon.org/home/uploads/monthly_2020_08/large.T00P01.gif.9ec92a831b7e411a89d5f9d96c4be296.gif')", backgroundSize: "cover", backgroundPosition: "center", minHeight: '100vh'}}>
                   <SignUp setUser={setUser}/>
                 </Container>
               }
